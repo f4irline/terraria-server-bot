@@ -14,3 +14,13 @@ export const ping: Command = {
     });
   }
 };
+
+export const exit: Command = {
+  name: "exit",
+  description: "Shuts the bot down.",
+  type: "CHAT_INPUT",
+  run: async (client: Client, interaction: BaseCommandInteraction) => {
+    client.destroy();
+    process.exit();
+  }
+};
