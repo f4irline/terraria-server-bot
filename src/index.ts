@@ -1,6 +1,6 @@
 import { Client } from "discord.js";
 import ready from './listeners/ready';
-import interactionCreate from './listeners/interactionCreate';
+import interactionCreate from './listeners/interaction_create';
 
 console.log("Bot is starting...");
 const token = process.env['TERRARIA_BOT_TOKEN'];
