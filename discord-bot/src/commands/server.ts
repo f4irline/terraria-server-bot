@@ -1,8 +1,8 @@
 import { BaseCommandInteraction, Client } from "discord.js";
 import { Command } from "../models/command";
-import spawn from 'child_process';
+import { exec, ChildProcess } from 'child_process';
 
-let serverProcess: spawn.ChildProcess | undefined;
+let serverProcess: ChildProcess | undefined;
 
 export const startServer: Command = {
   name: "start",
@@ -22,7 +22,7 @@ export const startServer: Command = {
       serverProcess = undefined;
     }
 
-    serverProcess = spawn.exec(`cmd /c "${PATH_TO_START_SCRIPT}"`);
+    serverProcess = exec(`cmd /c "${PATH_TO_START_SCRIPT}"`);
 
     serverProcess.addListener('spawn', async () => {
       await interaction.followUp({
