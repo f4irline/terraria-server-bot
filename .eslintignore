@@ -1,0 +1,15 @@
+# node_modules
+node_modules/
+
+# Build artifacts
+build/
+
+# Config
+config/
+yarn.lock
+
+# Docker
+Dockerfile
+
+# Misc
+README.md

@@ -19,7 +19,7 @@ export const exit: Command = {
   name: "exit",
   description: "Shuts the bot down.",
   type: "CHAT_INPUT",
-  run: async (client: Client, interaction: BaseCommandInteraction) => {
+  run: async (client: Client) => {
     client.destroy();
     process.exit();
   }
